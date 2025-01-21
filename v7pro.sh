@@ -1,13 +1,16 @@
 #!/bin/bash
 
-apt update
 
-sudo curl -fsSL https://get.docker.com | sh
 
 apt-get update; apt-get install curl socat git nload -y
 
-rm -r Marzban-node
+if ! command -v docker &> /dev/null; then
+  curl -fsSL https://get.docker.com | sh || echo_error "Docker installation failed."
+else
+  echo_info "Docker is already installed."
+fi
 
+rm -r Marzban-node
 
 git clone https://github.com/Gozargah/Marzban-node
 
