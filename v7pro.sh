@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo curl -fsSL https://get.docker.com | sh
 apt-get update; apt-get install curl socat git nload -y
 sleep 3
 curl -fsSL https://get.docker.com | sh
