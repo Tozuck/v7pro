@@ -1,12 +1,21 @@
 #!/bin/bash
 
+apt update
+
 sudo curl -fsSL https://get.docker.com | sh
+
 apt-get update; apt-get install curl socat git nload -y
-sleep 3
-curl -fsSL https://get.docker.com | sh
-sleep 3
+
+rm -r Marzban-node
+
+
 git clone https://github.com/Gozargah/Marzban-node
+
+rm -r /var/lib/marzban-node
+
 mkdir /var/lib/marzban-node
+
+rm ~/Marzban-node/docker-compose.yml
 
 cat <<EOL > ~/Marzban-node/docker-compose.yml
 services:
