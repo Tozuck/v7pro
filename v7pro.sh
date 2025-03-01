@@ -74,6 +74,8 @@ EOL
 cd ~/Marzban-node
 docker compose up -d
 
+echo_info "Finalizing UFW setup..."
+
 ufw allow 22
 ufw allow 80
 ufw allow 2096
