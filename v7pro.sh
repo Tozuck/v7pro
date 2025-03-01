@@ -1,6 +1,12 @@
 #!/bin/bash
 
-
+echo_info() {
+  echo -e "\033[1;32m[INFO]\033[0m $1"
+}
+echo_error() {
+  echo -e "\033[1;31m[ERROR]\033[0m $1"
+  exit 1
+}
 
 apt-get update; apt-get install curl socat git nload -y
 
