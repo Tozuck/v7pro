@@ -74,7 +74,6 @@ ufw allow 2096
 ufw allow 62050
 ufw allow 62051
 
-echo_info "Finalizing UFW setup..."
 ufw --force enable
 ufw reload
 
