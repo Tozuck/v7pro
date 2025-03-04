@@ -79,6 +79,7 @@ echo_info "Finalizing UFW setup..."
 ufw allow 22
 ufw allow 80
 ufw allow 2096
+ufw allow 8443
 ufw allow 62050
 ufw allow 62051
 
