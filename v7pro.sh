@@ -41,6 +41,8 @@ services:
       - /var/lib/marzban-node:/var/lib/marzban-node
 EOL
 
+rm /var/lib/marzban-node/ssl_client_cert.pem
+
 cat <<EOL > /var/lib/marzban-node/ssl_client_cert.pem
 -----BEGIN CERTIFICATE-----
 MIIEnDCCAoQCAQAwDQYJKoZIhvcNAQENBQAwEzERMA8GA1UEAwwIR296YXJnYWgw
@@ -78,8 +80,7 @@ echo_info "Finalizing UFW setup..."
 
 ufw allow 22
 ufw allow 80
-ufw allow 2096
-ufw allow 8443
+ufw allow 2053
 ufw allow 62050
 ufw allow 62051
 
